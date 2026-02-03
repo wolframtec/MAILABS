@@ -2,7 +2,7 @@
   "name": "ma-research-institute",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aaronalston.github.io/MAILABS",
+  "homepage": "https://wolframtec.github.io/MAILABS",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
