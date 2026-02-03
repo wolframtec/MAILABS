@@ -1,0 +1,168 @@
+export interface Case {
+  id: string;
+  title: string;
+  industry: string;
+  subIndustry?: string;
+  region: string;
+  sales: string;
+  profit: string;
+  price: string;
+  description?: string;
+  date: string;
+}
+
+export const cases: Case[] = [
+  {
+    id: "3598",
+    title: "[Vietnam] Urban supermarket chain with over 10 stores",
+    industry: "Food Wholesale and Retail",
+    subIndustry: "Supermarket",
+    region: "Asia",
+    sales: "500 million yen ~ 1 billion yen",
+    profit: "50 million yen ~ 100 million yen",
+    price: "690 million yen",
+    description: "Successful sale of a growing supermarket chain in Ho Chi Minh City to a Japanese retail conglomerate looking to expand in Southeast Asia.",
+    date: "2024-01-15",
+  },
+  {
+    id: "3564",
+    title: "[India] CRM Software Business",
+    industry: "IT and Software",
+    subIndustry: "SaaS",
+    region: "Asia",
+    sales: "500 million yen ~ 1 billion yen",
+    profit: "Private",
+    price: "500 million yen ~ 750 million yen",
+    description: "Cross-border acquisition of an Indian CRM software company by a Japanese IT services firm.",
+    date: "2024-01-10",
+  },
+  {
+    id: "3542",
+    title: "[Japan] Precision machining manufacturer",
+    industry: "Manufacturing",
+    subIndustry: "Machinery",
+    region: "Japan",
+    sales: "1 billion yen ~ 2 billion yen",
+    profit: "100 million yen ~ 200 million yen",
+    price: "1.2 billion yen",
+    description: "M&A between two precision parts manufacturers, creating synergies in technology and client base.",
+    date: "2024-01-05",
+  },
+  {
+    id: "3511",
+    title: "[Thailand] Medical device distributor",
+    industry: "Healthcare",
+    subIndustry: "Medical Devices",
+    region: "Asia",
+    sales: "300 million yen ~ 500 million yen",
+    profit: "30 million yen ~ 50 million yen",
+    price: "ASK",
+    description: "Strategic acquisition enabling Japanese medical device manufacturer to enter Thai market.",
+    date: "2023-12-28",
+  },
+  {
+    id: "3489",
+    title: "[USA] E-commerce platform for industrial parts",
+    industry: "IT and Software",
+    subIndustry: "E-commerce",
+    region: "North America",
+    sales: "2 billion yen ~ 3 billion yen",
+    profit: "200 million yen ~ 300 million yen",
+    price: "3.5 billion yen",
+    description: "Major cross-border deal facilitating Japanese manufacturer's digital transformation.",
+    date: "2023-12-20",
+  },
+  {
+    id: "3456",
+    title: "[Japan] Regional construction company",
+    industry: "Construction",
+    subIndustry: "General Construction",
+    region: "Japan",
+    sales: "800 million yen ~ 1.2 billion yen",
+    profit: "80 million yen ~ 120 million yen",
+    price: "950 million yen",
+    description: "Succession planning M&A ensuring business continuity for family-owned construction firm.",
+    date: "2023-12-15",
+  },
+  {
+    id: "3423",
+    title: "[Singapore] Fintech payment solutions provider",
+    industry: "Financial Services",
+    subIndustry: "Fintech",
+    region: "Asia",
+    sales: "400 million yen ~ 600 million yen",
+    profit: "Private",
+    price: "800 million yen ~ 1 billion yen",
+    description: "Strategic investment by Japanese financial institution in Southeast Asian fintech growth.",
+    date: "2023-12-10",
+  },
+  {
+    id: "3398",
+    title: "[Germany] Automotive parts manufacturer",
+    industry: "Manufacturing",
+    subIndustry: "Automotive",
+    region: "Europe",
+    sales: "3 billion yen ~ 4 billion yen",
+    profit: "300 million yen ~ 400 million yen",
+    price: "4.5 billion yen",
+    description: "Acquisition of specialized German automotive supplier by Japanese Tier 1 manufacturer.",
+    date: "2023-12-05",
+  },
+  {
+    id: "3365",
+    title: "[Japan] Specialized staffing agency",
+    industry: "Services",
+    subIndustry: "Staffing",
+    region: "Japan",
+    sales: "600 million yen ~ 800 million yen",
+    profit: "60 million yen ~ 80 million yen",
+    price: "720 million yen",
+    description: "Consolidation in the staffing industry, combining niche expertise with broader client access.",
+    date: "2023-11-28",
+  },
+  {
+    id: "3332",
+    title: "[Australia] Agriculture technology company",
+    industry: "Technology",
+    subIndustry: "Agtech",
+    region: "Oceania",
+    sales: "200 million yen ~ 400 million yen",
+    profit: "Private",
+    price: "500 million yen",
+    description: "Japanese trading company's strategic entry into Australian agricultural technology sector.",
+    date: "2023-11-20",
+  },
+  {
+    id: "3301",
+    title: "[Japan] Traditional ryokan hotel",
+    industry: "Real Estate",
+    subIndustry: "Hospitality",
+    region: "Japan",
+    sales: "150 million yen ~ 250 million yen",
+    profit: "20 million yen ~ 30 million yen",
+    price: "380 million yen",
+    description: "Preservation of cultural heritage through M&A, with plans for modernization while maintaining tradition.",
+    date: "2023-11-15",
+  },
+  {
+    id: "3278",
+    title: "[UK] Pharmaceutical research firm",
+    industry: "Healthcare",
+    subIndustry: "Pharmaceuticals",
+    region: "Europe",
+    sales: "1.5 billion yen ~ 2 billion yen",
+    profit: "Private",
+    price: "5 billion yen",
+    description: "Major Japanese pharmaceutical company's acquisition of UK biotech research capabilities.",
+    date: "2023-11-10",
+  },
+];
+
+export const industries = [...new Set(cases.map(c => c.industry))].sort();
+export const regions = [...new Set(cases.map(c => c.region))].sort();
+export const dealSizes = [
+  { label: "Under 500M yen", min: 0, max: 500 },
+  { label: "500M - 1B yen", min: 500, max: 1000 },
+  { label: "1B - 3B yen", min: 1000, max: 3000 },
+  { label: "Over 3B yen", min: 3000, max: Infinity },
+];
